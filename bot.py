@@ -27,7 +27,7 @@ from pyrogram import types
 from aiohttp import web
 from plugins import web_server
 from plugins.index import index_files_to_db, incol
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "8050")
 name = "main"
 
 async def restart_index(bot):
