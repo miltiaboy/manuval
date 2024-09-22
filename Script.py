@@ -250,7 +250,7 @@ Series - Dark S01E01
 ⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}
 
  ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
- ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+Q8PH1M-vZzk2YmM1> 𝐆𝐑𝐎𝐔𝐏 </a>
+ ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+JRWRXAzDwkc2NDA1> 𝐆𝐑𝐎𝐔𝐏 </a>
  ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+XzVIX3lhqzAyYTQ1> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a>
  ╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝</b>""" 
     
