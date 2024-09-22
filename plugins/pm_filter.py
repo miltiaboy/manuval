@@ -1266,12 +1266,105 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.AUTOFILTER_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )            
+        ) 
+    elif query.data.startswith("rules"):
+        _, search = query.data.split("#")
+        buttons = [[
+            InlineKeyboardButton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲 𝗡𝗮𝗺𝗲", url=f"https://google.com/search?q={search}")
+            ],[
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]        
+        await query.message.edit_text(
+            text=script.RULES_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )   
+    elif query.data.startswith("eng"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.ENG_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("mal"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.MALA_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("hin"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.HIND_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("tam"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]            
+        await query.message.edit_text(
+            text=script.TAM_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("tel"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]        
+        await query.message.edit_text(
+            text=script.TELG_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        ) 
+    elif query.data.startswith("langback"):
+        _, search = query.data.split("#")  
+        spl = f"<b>❝ 𝖧𝖾𝗒 : {query.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞ \n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>"                    
+        btn = [[
+           InlineKeyboardButton('𝗠𝘂𝘀𝘁 𝗥𝗲𝗮𝗱', 'mstd'),
+           InlineKeyboardButton('Rules', callback_data=f'rules#{search}'),
+           InlineKeyboardButton('Format', 'formt')
+          ],[
+           InlineKeyboardButton('ᴇɴɢ', callback_data=f'eng#{search}'),
+           InlineKeyboardButton('ᴍᴀʟ', callback_data=f'mal#{search}'),
+           InlineKeyboardButton('ʜɪɴ', callback_data=f'hin#{search}'),
+           InlineKeyboardButton('ᴛᴀᴍ', callback_data=f'tam#{search}'),
+           InlineKeyboardButton('ᴛᴇʟ', callback_data=f'tel#{search}')
+         ],[
+           InlineKeyboardButton(
+            text="📢 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝗚𝗼𝗼𝗴𝗹𝗲) 📢",
+            url=f"https://google.com/search?q={search}"
+        )
+            
+    ]]
+        await query.message.edit_text(spl, reply_markup=InlineKeyboardMarkup(btn))
+        
     elif query.data == "stats":
         await query.message.edit_text("ᴡᴀɪᴛ.....")
         buttons = [[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='botinfo'),
-            InlineKeyboardButton('🔄 𝐑ᴇғʀᴇ𝐬ʜ 🔄', callback_data='rfrsh')
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='botinfo'),            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         tot1 = await Media2.count_documents()
@@ -1475,7 +1568,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>📁 𝐇𝐞𝐫𝐞 𝐢𝐬 𝐖𝐡𝐚𝐭 𝐈 𝐅𝐨𝐮𝐧𝐝 𝐈𝐧 𝐌𝐲 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐐𝐮𝐞𝐫𝐲 👇\n\n🍂 𝐌𝐨𝐯𝐢𝐞 𝐍𝐚𝐦𝐞 : {search}</b>"        
+        cap = f"<b>𝖧𝖾𝗒 : {msg.from_user.mention}\n𝖥𝗂𝗅𝗆 : {search}\n𝖱𝖾𝗌𝗎𝗅𝗍𝗌 : {total_results}\n\n[Usᴇ Bᴇʟᴏᴡ Nᴇxᴛ Bᴜᴛᴛᴏɴ]</b>"         
     if imdb and imdb.get('poster'):
         try:
             mat = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -1489,35 +1582,42 @@ async def auto_filter(client, msg, spoll=False):
           #  await message.delete()
         except Exception as e:
             logger.exception(e)
-            await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             
           #  await message.delete()
     else:
-        await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         
        # await message.delete()
    # if spoll:
       #  await msg.message.delete()
 
 async def advantage_spell_chok(msg):
+    spl = f"<b>❝ 𝖧𝖾𝗒 : {msg.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞ \n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>"        
+    message = msg
     mv_rqst = msg.text
-    search = msg.text.replace(" ", "+")
+    search = msg.text.replace(" ", "+")      
     btn = [[
+        InlineKeyboardButton('𝗠𝘂𝘀𝘁 𝗥𝗲𝗮𝗱', 'mstd'),
+        InlineKeyboardButton('Rules', callback_data=f'rules#{search}'),
+        InlineKeyboardButton('Format', 'formt')
+        ],[
+        InlineKeyboardButton('ᴇɴɢ', callback_data=f'eng#{search}'),
+        InlineKeyboardButton('ᴍᴀʟ', callback_data=f'mal#{search}'),
+        InlineKeyboardButton('ʜɪɴ', callback_data=f'hin#{search}'),
+        InlineKeyboardButton('ᴛᴀᴍ', callback_data=f'tam#{search}'),
+        InlineKeyboardButton('ᴛᴇʟ', callback_data=f'tel#{search}')
+        ],[
         InlineKeyboardButton(
-            text="📢 Search in Google 📢",
+            text="📢 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝗚𝗼𝗼𝗴𝗹𝗲) 📢",
             url=f"https://google.com/search?q={search}"
         )
             
     ]]
-    spl = await msg.reply_photo(
-            photo="https://telegra.ph/file/14d888e879ff35aa71442.jpg", 
-            caption=NON_IMG.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(btn)
-    )
-    
+    await msg.reply_text(spl, reply_markup=InlineKeyboardMarkup(btn))
     #await msg.delete()
     return   
-
+    
 async def global_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
