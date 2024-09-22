@@ -1054,6 +1054,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "qinfo":
         await query.answer("𝑮𝒍𝒐𝒃𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓𝒔 𝒊𝒔 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑫𝒊𝒔𝒂𝒃𝒍𝒆𝒅..!!", show_alert=True)
+
+    elif query.data == "mstd":
+        await query.answer(script.MUST_TXT, show_alert=True)
+
+    elif query.data == "formt":
+        await query.answer(script.FORM_TXT, show_alert=True)
         
     elif query.data.startswith("send_fall"):
         temp_var, userid = query.data.split("#")
@@ -1379,6 +1385,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+        if query.from_user.id in ADMINS:
+            await query.message.edit_text(text=script.STATUS_TXT.format(total, users, chats, monsize, free), reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
+        else:
+            await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nIᴛꜱ ᴏɴʟʏ ғᴏʀ ᴍʏ ADMINS\n\n© [MCU] MOVIES", show_alert=True)
+            await query.message.edit_text(text="നോക്കി നിന്നോ ഇപ്പോൾ കിട്ടും 😏", reply_markup=reply_markup)
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
