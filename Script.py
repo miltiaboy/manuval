@@ -25,8 +25,13 @@ class script(object):
 
 📢 𝑼𝒑𝒅𝒂𝒕𝒆 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 : <a href=https://t.me/+XzVIX3lhqzAyYTQ1> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a></b>"""
 
-    AUTOFILTER_TXT = """<b>
- Bro Or Sis, ഈ ഒരു ബോട്ട് <a href=https://t.me/+Q8PH1M-vZzk2YmM1> 𝐆𝐑𝐎𝐔𝐏 </a> ൻ്റെ Aᴜᴛᴏ Fɪʟᴛᴇʀ Bᴏᴛ ᴠ1 ആണ് 🤗
+    AUTOFILTER_TXT = """<b>AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
+
+NOTE:
+1. Make me the admin of your channel if it's private.
+2. make sure that your channel does not contains camrips, porn and fake files.
+3. Forward the last message to me with quotes.
+ I'll add all the files in that channel to my db.
 
 ️📌 𝗔𝗻𝘆 𝗛𝗲𝗹𝗽 𝗣𝗹𝗲𝗮𝘀𝗲 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗔𝗱𝗺𝗶𝗻 : @MCU_ADMIN_V1_BOT</b>"""
 
