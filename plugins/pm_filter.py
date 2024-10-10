@@ -109,7 +109,7 @@ async def next_page(bot, query):
            InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{season}#{search}#{key}")
+           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
         ]
     )
 
@@ -279,7 +279,7 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
            InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{season}#{search}#{key}")
+           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
         ]
     )
     if offset != "":
@@ -611,7 +611,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
            InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{season}#{search}#{key}")
+           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
         ]
     )
     if offset != "":
@@ -726,7 +726,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
            InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{season}#{search}#{key}")
+           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
         ]
     )
     if offset != "":
@@ -1503,7 +1503,7 @@ async def auto_filter(client, msg, spoll=False):
            InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{season}#{search}#{key}")
+           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
         ]
     )
     if offset != "":
