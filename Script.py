@@ -25,8 +25,8 @@ class script(object):
 
 📢 𝑼𝒑𝒅𝒂𝒕𝒆 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 : <a href=https://t.me/+XzVIX3lhqzAyYTQ1> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a></b>"""
 
-    AUTOFILTER_TXT = """<b>AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
-
+    AUTOFILTER_TXT = """Help: <b>Auto Filter
+    
 NOTE:
 1. Make me the admin of your channel if it's private.
 2. make sure that your channel does not contains camrips, porn and fake files.
