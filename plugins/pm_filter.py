@@ -1054,12 +1054,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "qinfo":
         await query.answer("𝑮𝒍𝒐𝒃𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓𝒔 𝒊𝒔 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑫𝒊𝒔𝒂𝒃𝒍𝒆𝒅..!!", show_alert=True)
-
-    elif query.data == "mstd":
-        await query.answer(script.MUST_TXT, show_alert=True)
-
-    elif query.data == "formt":
-        await query.answer(script.FORM_TXT, show_alert=True)
+    
+    elif query.data == "oooi":
+        xd = query.message.reply_to_message.text.replace(" ", "+")
+        btn = [[                
+            InlineKeyboardButton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲 𝗡𝗮𝗺𝗲", url=f"https://www.google.com/search?q={xd}")
+            ],[   
+            InlineKeyboardButton('𝖻𝖺𝖼𝗄', callback_data='nlang')
+            ]]
+        await query.message.edit_text(text=f"<u><b>𝗛𝗲𝘆 {query.from_user.mention} 👋 𝗣𝗹𝗲𝗮𝘀𝗲 𝗙𝗼𝗹𝗹𝗼𝘄 𝗕𝗲𝗹𝗼𝘄 𝗠𝗼𝘃𝗶𝗲𝘀 𝗢𝗿 𝗦𝗲𝗿𝗶𝗲𝘀 𝗥𝗲𝗾𝘂𝗲𝘀𝘁𝗶𝗻𝗴 𝗥𝘂𝗹𝗲𝘀</b></u>\n\n𝗠𝗮𝗸𝗲 𝗦𝘂𝗿𝗲 𝗧𝗵𝗲 𝗠𝗼𝘃𝗶𝗲 𝗶𝘀 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝗱 𝗢𝗻 𝗢𝗧𝗧 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺𝘀\n\n𝖠𝗌𝗄 𝖥𝗈𝗋 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀\n\n𝖬𝗎𝗌𝗍 𝖢𝗁𝖾𝖼𝗄 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝗂𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 \n\n𝖠𝗌𝗄 𝖥𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 𝖨𝗇 𝖤𝗇𝗀𝗅𝗂𝗌𝗁 𝖫𝖾𝗍𝗍𝖾𝗋𝗌 𝖮𝗇𝗅𝗒\n\n𝖣𝗈𝗇'𝗍 𝖠𝗌𝗄 𝖥𝗈𝗋 𝖴𝗇𝗋𝖾𝗅𝖾𝖺𝗌𝖾𝖽 𝖬𝗈𝗏𝗂𝖾𝗌\n\n[𝖬𝗈𝗏𝗂𝖾 𝖭𝖺𝗆𝖾, 𝖸𝖾𝖺𝗋, 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾] 𝖠𝗌𝗄 𝖳𝗁𝗂𝗌 𝖶𝖺𝗒\n\n𝖣𝗈 𝖭𝗈𝗍 𝖴𝗌𝖾 𝖶𝗈𝗋𝖽𝗌 𝖫𝗂𝗄𝖾 𝖣𝗎𝖻, 𝖬𝗈𝗏𝗂𝖾, 𝖫𝗂𝗇𝗄, 𝖯𝗅𝗌𝗌, 𝖲𝖾𝗇𝗍 𝖾𝗍𝖼 𝖮𝗍𝗁𝖾𝗋 𝖳𝗁𝖺𝗇 𝖳𝗁𝖾 𝖶𝖺𝗒 𝖬𝖾𝗇𝗍𝗂𝗈𝗇𝖾𝖽 𝖠𝖻𝗈𝗏𝖾\n\n𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖲𝗍𝗒𝗅𝗂𝗌𝗁 𝖥𝗈𝗇𝗍 𝖶𝗁𝗂𝗅𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍\n\n𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖲𝗒𝗆𝖻𝗈𝗅𝗌 𝖶𝗁𝗂𝗅𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖬𝗈𝗏𝗂𝖾𝗌 𝗅𝗂𝗄𝖾 (+:;'!-|...𝖾𝗍𝖼)\n\n𝗜𝗳 𝘆𝗼𝘂 𝗱𝗼𝗻'𝘁 𝗴𝗲𝘁 𝘁𝗵𝗮𝘁 𝗠𝗼𝘃𝗶𝗲𝘀 𝗼𝗿 𝗦𝗲𝗿𝗶𝗲𝘀 𝗲𝘃𝗲𝗻 𝗮𝗳𝘁𝗲𝗿 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝘁𝗵𝗲 𝗿𝘂𝗹𝗲𝘀 𝗮𝗯𝗼𝘃𝗲, 𝘂𝗽𝗹𝗼𝗮𝗱 𝘁𝗵𝗲 𝗺𝗼𝘃𝗶𝗲 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 - <a href=https://t.me/ooppinne>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</a>\n\n<u><b>𝖬𝗈𝗏𝗂𝖾𝗌 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗂𝗇𝗀 𝖥𝗈𝗋𝗆𝖺𝗍</b></u>\n𝖪𝗎𝗋𝗎𝗉 𝖬𝗈𝗏𝗂𝖾❌\n𝖪𝗎𝗋𝗎𝗉 2021 ✅\n𝖪𝗀𝖿: 𝖢𝗁𝖺𝗉𝗍𝖾𝗋 2❌\n𝖪𝗀𝖿 𝖢𝗁𝖺𝗉𝗍𝖾𝗋 2✅\n\n<u><b>𝖲𝖾𝗋𝗂𝖾𝗌 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗂𝗇𝗀 𝖱𝗎𝗅𝖾𝗌</b></u>\n𝖲𝗍𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 𝗌𝖾𝖺𝗌𝗈𝗇 1❌\n𝖲𝗍𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 𝖲01✅\n𝖲𝗍𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 𝖤𝗉𝗂𝗌𝗈𝖽𝖾 1❌\n𝖲𝗍𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 𝖲01𝖤01✅\n\n<b>🎬ഫസ്റ്റ് ആയിട്ട് നിങ്ങൾ ശ്രദ്ധിക്കേണ്ടത് മൂവി നെയിം ആണ് അതിനായി താക്കെ കാണുന്ന ബട്ടൺ ക്ലിക്കോ ചെയ്ത്  ഗൂഗിൾ പോയി നെയിം സെർച്ച് ചെയ്ത കറക്റ്റ് മൂവി നെയിം കോപ്പി ചെയ്തിട്ട് ഗ്രൂപ്പ് ൽ ഇട്ടാൽ കിട്ടും🤍\n\n💡മുകളിൽ ഉള്ള കാര്യങ്ങൾ ഫോളോ ചെയ്തിട്ടും മൂവി കിട്ടുന്നില്ല എനിക്കിൽ മൂവി 👉<a href=https://t.me/ooppinne>𝗠𝗦𝗚 𝗛𝗘𝗥𝗘</a> msg അയയ്ക്കുക 30 min ശേഷം മൂവി ബോട്ട് ഇൽ അപ്ലോഡ് ആക്കുന്നതാണ് 🎉</b>", reply_markup=InlineKeyboardMarkup(btn))
+ 
         
     elif query.data.startswith("send_fall"):
         temp_var, userid = query.data.split("#")
@@ -1608,30 +1612,65 @@ async def auto_filter(client, msg, spoll=False):
       #  await msg.message.delete()
 
 async def advantage_spell_chok(msg):
-    spl = f"<b>❝ 𝖧𝖾𝗒 : {msg.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞ \n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>"        
-    message = msg
+    mv_id = msg.id
     mv_rqst = msg.text
-    search = msg.text.replace(" ", "+")      
-    btn = [[
-        InlineKeyboardButton('𝗠𝘂𝘀𝘁 𝗥𝗲𝗮𝗱', 'mstd'),
-        InlineKeyboardButton('Rules', callback_data=f'rules#{search}'),
-        InlineKeyboardButton('Format', 'formt')
-        ],[
-        InlineKeyboardButton('ᴇɴɢ', callback_data=f'eng#{search}'),
-        InlineKeyboardButton('ᴍᴀʟ', callback_data=f'mal#{search}'),
-        InlineKeyboardButton('ʜɪɴ', callback_data=f'hin#{search}'),
-        InlineKeyboardButton('ᴛᴀᴍ', callback_data=f'tam#{search}'),
-        InlineKeyboardButton('ᴛᴇʟ', callback_data=f'tel#{search}')
-        ],[
-        InlineKeyboardButton(
-            text="📢 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝗚𝗼𝗼𝗴𝗹𝗲) 📢",
-            url=f"https://google.com/search?q={search}"
-        )
-            
-    ]]
-    await msg.reply_text(spl, reply_markup=InlineKeyboardMarkup(btn))
-    #await msg.delete()
-    return   
+    reqstr1 = msg.from_user.id if msg.from_user else 0
+    query = re.sub(
+        r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
+        "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
+    query = query.strip() + " movie"
+    try:
+        movies = await get_poster(mv_rqst, bulk=True)
+    except Exception as e:
+        logger.exception(e)
+        reqst_gle = mv_rqst.replace(" ", "+")
+        button = [[        
+        InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
+        ]]        
+        k = await msg.reply_text(
+            text=("<b>I couldn't find the file you requested 😕\nTry to do the following...\n\n=> Request with correct spelling\n\n=> Don't ask movies that are not released in OTT platforms\n\n=> Try to ask in [MovieName, Language] this format.\n\n=> Use the button below to search on Google 😌</b>"),
+            reply_markup=InlineKeyboardMarkup(button),
+            reply_to_message_id=msg.id
+        )                                           
+        await msg.delete()
+        await asyncio.sleep(60)
+        await k.delete()      
+        return
+    movielist = []
+    if not movies:
+        reqst_gle = mv_rqst.replace(" ", "+")
+        button = [[        
+        InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
+        ]]
+        k = await msg.reply_text(
+            text=("<b>I couldn't find the file you requested 😕\nTry to do the following...\n\n=> Request with correct spelling\n\n=> Don't ask movies that are not released in OTT platforms\n\n=> Try to ask in [MovieName, Language] this format.\n\n=> Use the button below to search on Google 😌</b>"),
+            reply_markup=InlineKeyboardMarkup(button),
+            reply_to_message_id=msg.id
+        )                                           
+        await msg.delete()
+        await asyncio.sleep(60)
+        await k.delete()
+        return
+    movielist = [movie.get('title') for movie in movies]
+    SPELL_CHECK[mv_id] = movielist
+    btn = [
+        [
+            InlineKeyboardButton(
+                text=movie_name.strip(),
+                callback_data=f"spolling#{reqstr1}#{k}",
+            )
+        ]
+        for k, movie_name in enumerate(movielist)
+    ]
+    btn.append([InlineKeyboardButton(text="✘ ᴄʟᴏsᴇ ✘", callback_data=f'spolling#{reqstr1}#close_spellcheck')])
+    spell_check_del = await msg.reply_text(
+        text="I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?",
+        reply_markup=InlineKeyboardMarkup(btn),
+        reply_to_message_id=msg.id
+    )
+    await asyncio.sleep(90)
+    await spell_check_del.delete()
+    await msg.delete()
     
 async def global_filters(client, message, text=False):
     group_id = message.chat.id
@@ -1656,7 +1695,7 @@ async def global_filters(client, message, text=False):
                                 disable_web_page_preview=True,
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep()
+                            await asyncio.sleep(454)
                             await knd3.delete()
                             await message.delete()
 
@@ -1669,7 +1708,7 @@ async def global_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep()
+                            await asyncio.sleep(465)
                             await knd2.delete()
                             await message.delete()
 
@@ -1680,7 +1719,7 @@ async def global_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep()
+                        await asyncio.sleep(565)
                         await knd1.delete()
                         await message.delete()
 
@@ -1692,7 +1731,7 @@ async def global_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep()
+                        await asyncio.sleep(475)
                         await knd.delete()
                         await message.delete()
 
