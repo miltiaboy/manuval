@@ -29,21 +29,21 @@ NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/5de2a87af196bcd866b7f.
 # Admins, Channels & Users
 OWNER_ID = environ.get('OWNER_ID', '7425490417 1509123054')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7425490417 1509123054').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002397004421').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002397004421 -1002479401977').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_NAME = environ.get('DATABASE_NAME', "atmanaf")
+DATABASE_NAME = environ.get('DATABASE_NAME', "saniyav5")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://atmanaf:atmanaf@cluster0.k4xmqd4.mongodb.net/")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Honeyrose:Honeyrose@cluster0.swp9s0i.mongodb.net/")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://Honerose3:Honerose3@cluster0.hoo2xot.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://Honerose4:Honerose4@cluster0.o6jnjpx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://Honerose5:Honerose5@cluster0.vx5iyut.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-                            
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://saniyav5:saniyav5@cluster0.uh9uh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://saniyav1:saniyav1@cluster0.bchlaxl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://saniyav2:saniyav2@cluster0.ekrhhei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://saniyav3:saniyav3@cluster0.d1b5gjs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://saniyav4:saniyav4@cluster0.tknhrjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+                                  
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
