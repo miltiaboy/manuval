@@ -137,7 +137,7 @@ NOTE:
 
 /restart - Restart ✅
 
-/logs - bot logs txt<b>"""
+/logs - bot logs txt</b>"""
   
     CUSTOM_FILE_CAPTION = """<b>𝐻𝑒𝑙𝑙𝑜 👋 {mention} 😍
 
