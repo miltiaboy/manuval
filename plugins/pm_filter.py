@@ -1194,7 +1194,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 🤷🏻', callback_data='movedow')           
             ],[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='start'),
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1306,7 +1306,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(text=script.STATUS_TXT.format(total, users, chats, monsize, free), reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
         else:
             await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nIᴛꜱ ᴏɴʟʏ ғᴏʀ ᴍʏ ADMINS\n\n© [MCU] MOVIES", show_alert=True)
-            await query.message.edit_text(text="നോക്കി നിന്നോ ഇപ്പോൾ കിട്ടും 😏", reply_markup=reply_markup)
+            await query.message.edit_text(text="അഡ്മിൻസിന് മാത്രമേ കാണാൻ പറ്റുകയുള്ളൂ.. 🤗", reply_markup=reply_markup)
 
     elif query.data == "eng":
        xd = query.message.reply_to_message.text.replace(" ", "+")
