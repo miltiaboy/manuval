@@ -118,17 +118,15 @@ class script(object):
     
 /start - Welcome🤗 (Help , About and others)
     
-/setchat1 - 1st force Sub Channel ID
+/setchat - force Sub Channel ID
 
-/setchat2 - 2nd Force Sub Channel ID
+/viewchat - which force sub running chek
 
-/totalreq - Total Req in 2 Fsub Channels
-
-/purge_one - Delete Requests (1st fsub)
-
-/purge_two - Delete Requests (2nd fsub) 
+/delchat - Delete Requests (force Sub)
 
 /stats - Check Stats
+
+/deletefiles - Movie name all Files delete 
 
 /ping - Bot Speed , Cpu etc
 
