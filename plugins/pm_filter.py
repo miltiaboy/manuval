@@ -121,7 +121,7 @@ async def next_page(bot, query):
 
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("↲ 𝑷𝒓𝒆𝒗𝒊𝒐𝒖𝒔", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("↵ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📖 𝑷𝒂𝒈𝒆𝒔 {math.ceil((offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
@@ -138,7 +138,7 @@ async def next_page(bot, query):
     else:
         btn.append(
             [
-                InlineKeyboardButton("↲ 𝑷𝒓𝒆𝒗𝒊𝒐𝒖𝒔", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("↵ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"📖 𝑷𝒂𝒈𝒆𝒔 {math.ceil((offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
                 InlineKeyboardButton("Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
@@ -1081,16 +1081,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+XzVIX3lhqzAyYTQ1")
+            InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('👥 𝑪𝒐𝒎𝒎𝒖𝒏𝒊𝒕𝒚 👥', callback_data='commun'),
-            InlineKeyboardButton('🤖 𝑩𝒐𝒕 𝒊𝒏𝒇𝒐 🤖', callback_data='about')
+            InlineKeyboardButton('Cᴏᴍᴍᴜɴɪᴛʏ', callback_data='commun'),
+            InlineKeyboardButton('Bᴏᴛ ɪɴғᴏ', callback_data='about')
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),            
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='botinfo')
-            ],[
-            InlineKeyboardButton("🖥 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 🖥", url='https://t.me/+Q8PH1M-vZzk2YmM1')
-            
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),            
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='botinfo')                          
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1101,12 +1098,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')    
     elif query.data == "commun":
         buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl")            
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+JRWRXAzDwkc2NDA1"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/+uGkuM2x4Bf4yM2Zl")
+            ],[
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/+XZq5smozmoA1ZDNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/Cinemalokamramanan2024")  
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/+XzVIX3lhqzAyYTQ1")
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')                  
             ],[       
-            InlineKeyboardButton('🪬 𝑯𝒐𝒎𝒆 🪬', callback_data='start'),
-            InlineKeyboardButton('🗣 𝑨𝒅𝒎𝒊𝒏', url=f"https://t.me/tg_tarzan")
+            InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
+            InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', url=f"https://t.me/MCU_ADMIN_V1_BOT")
             ],[
             InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄𝐒 🤷🏻', callback_data='movereq'),
         
@@ -1126,7 +1129,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "movedow":
         buttons = [[
             InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+Q8PH1M-vZzk2YmM1"),
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1142,7 +1145,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "movereqs":
         buttons = [[
             InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+Q8PH1M-vZzk2YmM1"),
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1159,7 +1162,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "movereq":
         buttons = [[
             InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+Q8PH1M-vZzk2YmM1"),
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='commun')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='commun')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1198,13 +1201,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "botinfo":
         buttons = [[                             
-            InlineKeyboardButton('📈 𝑺𝒕𝒂𝒕𝒖𝒔', callback_data='stats'),
-            InlineKeyboardButton('☠ 𝑺𝒐𝒖𝒓𝒄𝒆', callback_data='sorce')
+            InlineKeyboardButton('📈 sᴛᴀᴛᴜs', callback_data='stats'),
+            InlineKeyboardButton('☠ sᴏᴜʀᴄᴇ', callback_data='sorce')
             ],[
-            InlineKeyboardButton("🤴🏻 𝑨𝒅𝒎𝒊𝒏", url=f"https://t.me/tg_tarzan"),
+            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", url=f"https://t.me/tg_tarzan"),
             ],[
-            InlineKeyboardButton('🪬 𝑯𝒐𝒎𝒆 🪬', callback_data='start'),
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')                       
+            InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                       
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1219,8 +1222,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[            
-            InlineKeyboardButton('🪬 𝑯𝒐𝒎𝒆 🪬', callback_data='start'),
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')                                    
+            InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                                    
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1235,7 +1238,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )        
     elif query.data == "sorce":
         buttons = [[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='botinfo')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='botinfo')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1250,7 +1253,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1268,7 +1271,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲 𝗡𝗮𝗺𝗲", url=f"https://google.com/search?q={search}")
             ],[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data=f'langback#{search}')
         ]]        
         await query.message.edit_text(
             text=script.RULES_TXT.format(query.from_user.mention),
@@ -1280,7 +1283,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[ 
             InlineKeyboardButton(
             text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data=f'langback#{search}')
         ]]     
         await query.message.edit_text(
             text=script.ENG_TXT.format(query.from_user.mention),
@@ -1292,7 +1295,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[ 
             InlineKeyboardButton(
             text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data=f'langback#{search}')
         ]]     
         await query.message.edit_text(
             text=script.MALA_TXT.format(query.from_user.mention),
@@ -1360,7 +1363,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         await query.message.edit_text("ᴡᴀɪᴛ.....")
         buttons = [[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='botinfo'),            
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='botinfo'),            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         tot1 = await Media2.count_documents()
