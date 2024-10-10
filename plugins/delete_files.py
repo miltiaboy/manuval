@@ -14,7 +14,7 @@ from utils import temp
 lock = asyncio.Lock()
 
 media_filter = filters.document | filters.video | filters.audio
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001990481849').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002354592029').split()]
 
 
 @Client.on_message(filters.chat(DELETE_CHANNELS) & media_filter)
