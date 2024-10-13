@@ -142,7 +142,7 @@ NOTE:
 ⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}
 
  ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
- ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+JRWRXAzDwkc2NDA1> 𝐆𝐑𝐎𝐔𝐏 </a>
+ ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+lDU_yeyF6WMwYjVl> 𝐆𝐑𝐎𝐔𝐏 </a>
  ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+mKFmz9pYLkc5Njhl> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a>
  ╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝</b>""" 
     
