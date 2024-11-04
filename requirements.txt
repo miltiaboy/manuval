@@ -9,7 +9,7 @@ motor==2.5.1
 marshmallow==3.14.1
 umongo==3.0.1
 psutil==5.9.4
-pyrofork
+pyrotgfork
 python-dotenv
 pytz
 requests
