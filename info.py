@@ -18,7 +18,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '12618934'))
 API_HASH = environ.get('API_HASH', '49aacd0bc2f8924add29fb02e20c8a16')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7774372888:AAHSKph1s8hAu9CjjhudOV0vFSwBdU6fgSc')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7151944860:AAG24UtYPCqIeMKclkoM7uTQ2yCUdF-cKCs')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -38,9 +38,9 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_NAME = environ.get('DATABASE_NAME', "saniyav5")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://saniyav5:saniyav5@cluster0.uh9uh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://saniyav1:saniyav1@cluster0.bchlaxl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://saniyav2:saniyav2@cluster0.ekrhhei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://austin123:frGcR2lFvQkE6IYC@cluster0.liesw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://movietharavadu:UVoobug4UoiWr90I@cluster0.a2va7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://austin2001:rBIgGdrNSOSBDcKF@cluster0.wn6bi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://saniyav3:saniyav3@cluster0.d1b5gjs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://saniyav4:saniyav4@cluster0.tknhrjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
                                   
@@ -48,12 +48,12 @@ DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://saniyav4:saniyav4@cl
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL=environ.get("REQ_CHANNEL", None)
+REQ_CHANNEL=environ.get("REQ_CHANNEL", '-1002302449754')
 REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False) if REQ_CHANNEL is not None else None
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002276401285'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002486076285'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MOVIES_ZILAA')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), False)
