@@ -1110,9 +1110,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "commun":
         buttons = [[
             InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/+mVb73DEYBdg1N2Rl")
             ],[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/+CCe4OvJnSmU0NDk1"),
             InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")  
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/+WgmakVHYWL01MmY1")
