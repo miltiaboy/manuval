@@ -1109,18 +1109,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')    
     elif query.data == "commun":
         buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+JRWRXAzDwkc2NDA1"),
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/+uGkuM2x4Bf4yM2Zl")
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")
             ],[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/+XZq5smozmoA1ZDNl"),
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/Cinemalokamramanan2024")  
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")  
             ],[
-            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/+XzVIX3lhqzAyYTQ1")
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/+WgmakVHYWL01MmY1")
             ],[
             InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')                  
             ],[       
             InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
-            InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', url=f"https://t.me/MCU_ADMIN_V1_BOT")
+            InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', nil )
             ],[
             InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄𝐒 🤷🏻', callback_data='movereq'),
         
@@ -1134,7 +1134,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "movedow":
         buttons = [[
-            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+2FCs53JjHZo0MmZl"),
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
             InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
@@ -1160,7 +1160,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "movereqs":
         buttons = [[
-            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+2FCs53JjHZo0MmZl"),
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
             InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
@@ -1172,7 +1172,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "movereq":
         buttons = [[
-            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+2FCs53JjHZo0MmZl"),
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+nqLSf7SMZA5mOWQ1"),
             InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='commun')
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
@@ -1205,7 +1205,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('📈 sᴛᴀᴛᴜs', callback_data='stats'),
             InlineKeyboardButton('☠ sᴏᴜʀᴄᴇ', callback_data='sorce')
             ],[
-            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", url=f"https://t.me/tg_tarzan"),
+            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", nil),
             ],[
             InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
             InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                       
