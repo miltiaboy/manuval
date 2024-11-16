@@ -1205,7 +1205,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('📈 sᴛᴀᴛᴜs', callback_data='stats'),
             InlineKeyboardButton('☠ sᴏᴜʀᴄᴇ', callback_data='sorce')
             ],[
-            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", nil),
+            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", url=f"https://t.me/MCU_ADMIN_V1_BOT" ),
             ],[
             InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
             InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                       
