@@ -1120,7 +1120,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')                  
             ],[       
             InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
-            InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', , url=f"https://t.me/MCU_ADMIN_V1_BOT" )
+            InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', url=f"https://t.me/MCU_ADMIN_V1_BOT" )
             ],[
             InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄𝐒 🤷🏻', callback_data='movereq'),
         
