@@ -245,7 +245,7 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
     
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
@@ -540,7 +540,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
     
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
@@ -614,7 +614,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"《{get_size(file.file_size)}》 {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"{get_size(file.file_size)} {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -633,33 +633,14 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     BUTTONS[key] = search
-    btn.insert(0, 
-        [
-           InlineKeyboardButton("ᴏᴛᴛ ᴜᴘᴅᴀᴛᴇs", url='https://t.me/+WgmakVHYWL01MmY1'),
-           InlineKeyboardButton("ᴏᴛᴛ ɪɴsᴛɢʀᴀᴍ", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
-        ]
-    )
-    btn.insert(1, 
-        [
-           InlineKeyboardButton("sᴇɴᴅ ᴀʟʟ ғɪʟᴇs", callback_data=f"send_fall#{key}"),
-           InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
-        ]
-    )
-    btn.insert(2, 
-        [
-           InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
-        ]
-    )
+    
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("📖 𝑷𝒂𝒈𝒆𝒔", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")]
+                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
         )
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     temp.SEND_ALL_TEMP[key] = files
