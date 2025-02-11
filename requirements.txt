@@ -1,6 +1,6 @@
 aiofiles
 git+https://github.com/agronholm/anyio
-aiohttp
+aiohttp==3.7.4
 bs4==0.0.1
 datetime
 git+https://github.com/Joelkb/cinemagoer
@@ -14,3 +14,4 @@ python-dotenv
 pytz
 requests
 tgcrypto
+pyrofork==2.3.45
