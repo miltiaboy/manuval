@@ -1,25 +1,19 @@
 class script(object):
-    START_TXT = """<b>𝖧𝖾𝗒 {}, 𝖨 𝖠𝗆 <a href=https://t.me/{}>{}</a>, 𝖧𝖺𝗉𝗉𝗒 🖤 𝖳𝗈 𝖧𝖺𝗏𝖾 𝖸𝗈𝗎
+    START_TXT = """<i><b><blockquote>ʜᴇʟʟᴏ {}👋,</blockquote>
+<b>ɪ ᴀᴍ <a href=https://t.me/{}>{}</a>,</b>
 
-𝖨𝖺𝗆 𝖯𝗈𝗐𝖾𝗋𝖥𝗎𝗅𝗅 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 + 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 + 𝖬𝖺𝗇𝗎𝖺𝗅 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 ⚙
+ɪ ᴀᴍ ʟᴀᴛᴇꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟʟ ᴀᴜᴛᴏғɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴀᴍᴀᴢɪɴɢ ғᴇᴀᴛᴜʀᴇs ᴊᴜsᴛ ᴛʏᴘᴇ ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇɴ sᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 💘</b></i>
 
-𝖨𝖺𝗆 𝖠 𝖡𝗈𝗍 𝖯𝗋𝗈𝗏𝗂𝖽𝗂𝗇𝗀 𝖬𝗈𝗏𝗂𝖾𝗌 𝖠𝗇𝖽 𝖲𝖾𝗋𝗂𝖾𝗌 𝖲𝗈 𝖠𝖽𝖽 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖥𝖺𝗆. 𝖳𝗁𝖾𝗇 𝖨 𝖶𝗂𝗅𝗅 𝗌𝖾𝗇𝗍 𝖳𝗁𝖾 𝖬𝗈𝗏𝗂𝖾𝗌⏳
-
-𝖢𝗅𝗂𝖼𝗄 𝖡𝖾𝗅𝗈𝗐 𝖴𝗌𝖾𝖿𝗎𝗅 𝖡𝗎𝗍𝗍𝗈𝗇𝗌🫶</b>"""
+<b><a href=https://t.me/+JQeou0PAx_Y0ZGFl>©𝐓𝐞𝐚𝐦 𝐔𝐫𝐯𝐚𝐬𝐡𝐢 𝐓𝐡𝐞𝐚𝐭𝐞𝐫𝐬™️</a></b>"""
     
-    ABOUT_TXT = """<b>🤖 𝑴𝒚 𝑵𝒂𝒎𝒆 : <a href=https://t.me/{}>{}</a>
+    ABOUT_TXT = """<b><blockquote>⍟───[ 🎩ᴍʀ ʀᴀᴍᴀɴᴀɴ🎩 ]───⍟
     
-📝 𝑳𝒂𝒏𝒈𝒖𝒂𝒈𝒆 : <a href='https://www.python.org/download/releases/3.0/'>𝑷𝒚𝒕𝒉𝒐𝒏</a>
-
-📚 𝑭𝒓𝒂𝒎𝒆𝒘𝒐𝒓𝒌 : <a href='https://docs.pyrogram.org/'>𝑷𝒚𝒓𝒐𝒈𝒓𝒂𝒎</a>
-
-📡 𝑯𝒐𝒔𝒕𝒆𝒅 𝑶𝒏 : 𝑯𝑬𝑹𝑲𝑼𝑶
-
-👨‍💻 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 : <a href='http://t.me/MCU_ADMIN_V1_BOT'>𝐍𝐚𝐳𝐫𝐢𝐲𝐚 𝐀𝐝𝐦𝐢𝐧</a>
-
-👥 𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝑮𝒓𝒐𝒖𝒑 : <a href=https://t.me/+nqLSf7SMZA5mOWQ1> 𝐆𝐑𝐎𝐔𝐏 </a>
-
-📢 𝑼𝒑𝒅𝒂𝒕𝒆 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 : <a href=https://t.me/+WgmakVHYWL01MmY1> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a></b>"""
+‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}>{}</a>
+‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://t.me/PowerOfTG>ᴏᴡɴᴇʀ</a> 
+‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
+‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
+‣ ᴅᴀᴛᴀʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
+‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ2.7.1 [sᴛᴀʙʟᴇ]</b></blockquote>"""
 
     AUTOFILTER_TXT = """Help: <b>Auto Filter
     
@@ -39,7 +33,12 @@ NOTE:
 
 ✫ 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖲𝖾𝗇𝖽 𝖡𝗈𝗍 𝖠𝖽𝗆𝗂𝗇 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝖥𝗈𝗋 𝖴𝗉𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖬𝗈𝗏𝗂𝖾𝗌, 𝖯𝖺𝗂𝖽 𝖯𝗋𝗈𝗆𝗈𝗍𝗂𝗈𝗇 𝖾𝗍𝖼</b>"""
     
-    SORCE_TXT = """<b>കൊട്ക്ക്ണില്ല്യാ...... [PRIVATE REPO]</b>"""
+    SORCE_TXT = """<b><blockquote>Nᴏᴛᴇ:
+𝐖𝐚𝐧𝐭 𝐀 𝐁𝐨𝐭 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬:
+✭ I ᴡɪʟʟ ᴄʀᴇᴀᴛᴇ ᴏɴᴇ ʙᴏᴛ ғᴏʀ ʏᴏᴜ.
+✭ Cᴏɴᴛᴀᴄᴛ ᴛᴏ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ ☟</blockquote></b>
+
+<b><a href=https://t.me/PowerOfTG>ᴘᴏᴡᴇʀ ᴏꜰ ᴛɢ🇮🇳</a></b>"""
     
     MOVDOW_TXT = """<b> 1. 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩 - 𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞
 
@@ -135,18 +134,14 @@ NOTE:
 
 /logs - bot logs txt</b>"""
   
-    CUSTOM_FILE_CAPTION = """<b>𝐻𝑒𝑙𝑙𝑜 👋 {mention} 😍
+    CUSTOM_FILE_CAPTION = """
+<i><b><blockquote>📚 {file_name}
 
-{file_name}
+⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}</blockquote></b></i>
 
-⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}
-
- ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
- ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+nqLSf7SMZA5mOWQ1> 𝐆𝐑𝐎𝐔𝐏 </a>
- ➲ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/+WgmakVHYWL01MmY1> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a>
- ╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝</b>""" 
+<b><a href=https://t.me/+JQeou0PAx_Y0ZGFl>©𝐓𝐞𝐚𝐦 𝐔𝐫𝐯𝐚𝐬𝐡𝐢 𝐓𝐡𝐞𝐚𝐭𝐞𝐫𝐬™️</a></b>""" 
     
-    STATUS_TXT = """📂 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌     - <code>{}</code>
+    STATUS_TXT = """<b><blockquote>📂 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌     - <code>{}</code>
 
 𒆜  𝗗𝗕 1️⃣
 ╭ ▸ 𝖴𝗌𝖾𝗋𝗌 : <code>{}</code>
@@ -167,7 +162,7 @@ NOTE:
 
 𒆜 𝗗𝗕 5️⃣
 ╭ ▸ 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌 : <code>{}</code>
-╰ ▸ 𝖴𝗌𝖾𝖽 𝖲𝗍𝗈𝗋𝖺𝗀𝖾: <code>{}</code>MB"""
+╰ ▸ 𝖴𝗌𝖾𝖽 𝖲𝗍𝗈𝗋𝖺𝗀𝖾: <code>{}</code>MB</blockquote></b>"""
     
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
