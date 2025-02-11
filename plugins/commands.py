@@ -34,17 +34,13 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [
-            [
-                InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+WgmakVHYWL01MmY1')
-            ],
-            [
-                InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+nqLSf7SMZA5mOWQ1"),
-            ]
-        ]
+        buttons = [[          
+            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/UrvashiTheaters_Main')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-        await asyncio.sleep(2) # 😢 https://github.com/8769ANURAG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await message.reply_video(video="https://envs.sh/OL_.mp4", caption=script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await asyncio.sleep(5) # 😢 https://github.com/8769ANURAG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -57,13 +53,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Cᴏᴍᴍᴜɴɪᴛʏ', callback_data='commun'),
-            InlineKeyboardButton('Bᴏᴛ ɪɴғᴏ', callback_data='about')
+            InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
+            InlineKeyboardButton('ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/PowerOfTG')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),            
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='botinfo')  
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='botinfo'),            
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')  
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
+            InlineKeyboardButton('ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʟɪɴᴋs', url='https://t.me/UrvashiTheaters_Main')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_text(script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -79,13 +75,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Cᴏᴍᴍᴜɴɪᴛʏ', callback_data='commun'),
-            InlineKeyboardButton('Bᴏᴛ ɪɴғᴏ', callback_data='about')
+            InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
+            InlineKeyboardButton('ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/PowerOfTG')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),            
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='botinfo')   
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='botinfo'),            
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')  
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
+            InlineKeyboardButton('ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʟɪɴᴋs', url='https://t.me/UrvashiTheaters_Main')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_text(script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -150,9 +146,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+WgmakVHYWL01MmY1')
-                          ],[     
-                            InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+nqLSf7SMZA5mOWQ1"),
+                            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),         
+                            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/UrvashiTheaters_Main')
                            ]
                         ]
                     )
@@ -277,7 +272,7 @@ async def delete_all_index_confirm(bot, message):
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
-@Client.on_message(filters.command('settings'))
+@Client.on_message(filters.command('sree'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
