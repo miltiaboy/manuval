@@ -7,6 +7,7 @@ from database.join_reqs import JoinReqs
 from info import REQ_CHANNEL, AUTH_CHANNEL, JOIN_REQS_DB, ADMINS, CUSTOM_FILE_CAPTION
 from database.ia_filterdb import get_file_details
 from logging import getLogger
+from Script import script
 
 logger = getLogger(__name__)
 INVITE_LINK = None
@@ -92,11 +93,11 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         else:
             return True
     except UserNotParticipant:
-        text=f"""<b>⚠️ ശ്രദ്ധിക്കുക ⚠️\n\n{update.from_user.mention} 🙋‍♂️ ഫയൽ ലഭിക്കാൻ ഒരൊറ്റ ഒരു കാര്യം ചെയ്താൽ മതി താഴെ കാണുന്ന «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» ബട്ടൻ ക്ലിക്ക് ചെയ്തിട്ട് «Request to join chnnnel» ക്ലിക്ക് ചെയ്താൽ അപ്പോൾ തന്നെ ഫയൽ ലഭിക്കും..!\n\n⚠️ 𝐵𝑒 𝐶𝑎𝑟𝑒𝑓𝑢𝑙 ⚠️\n\n𝑇𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 {update.from_user.mention} 🙋‍♂️ 𝑓𝑖𝑙𝑒, 𝑦𝑜𝑢 𝑗𝑢𝑠𝑡 ℎ𝑎𝑣𝑒 𝑡𝑜 𝑑𝑜 𝑜𝑛𝑒 𝑡ℎ𝑖𝑛𝑔, 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 𝑡ℎ𝑒 𝑏𝑒𝑙𝑜𝑤 «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» 𝑏𝑢𝑡𝑡𝑜𝑛 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 «𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑡𝑜 𝑗𝑜𝑖𝑛 𝑐ℎ𝑎𝑛𝑛𝑒𝑙» 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑦𝑜𝑢 𝑤𝑖𝑙𝑙 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒..!!</b>"""
+        text="""hai"""
 
         buttons = [
             [
-                InlineKeyboardButton("➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺", url=invite_link)
+                InlineKeyboardButton("🚸 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 🚸", url=invite_link)
             ]
         ]
 
@@ -105,7 +106,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
 
         if not is_cb:
             sh = await update.reply(
-                text=text,
+                text=script.SUB_TXT,
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=enums.ParseMode.DEFAULT,
@@ -163,9 +164,8 @@ async def send_file(client, query, ident, file_id):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+WgmakVHYWL01MmY1')
-                          ],[     
-                            InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+nqLSf7SMZA5mOWQ1"),
+                            InlineKeyboardButton('ɢʀᴏᴜᴘ', url=f'https://t.me/+WgmakVHYWL01MmY1'),  
+                            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/UrvashiTheaters_Main')
                            ]
                         ]
                     )
