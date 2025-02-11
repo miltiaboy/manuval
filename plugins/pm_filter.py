@@ -28,6 +28,15 @@ BUTTONS = {}
 SPELL_CHECK = {}
 SEASON = {}
 
+RATING = ["5.1 | IMDB", "6.2 | IMDB", "7.3 | IMDB", "8.4 | IMDB", "9.5 | IMDB", "8.3 | IMDB", "6.3 | IMDB"]
+GENRES = ["fun, fact",
+          "Thriller, Comedy",
+          "Drama, Comedy",
+          "Family, Drama",
+          "Action, Adventure",
+          "Film Noir",
+          "Documentary"]
+
 # Choose Option Settings 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10"]
@@ -996,13 +1005,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Cᴏᴍᴍᴜɴɪᴛʏ', callback_data='commun'),
-            InlineKeyboardButton('Bᴏᴛ ɪɴғᴏ', callback_data='about')
+            InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
+            InlineKeyboardButton('ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/PowerOfTG')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),            
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='botinfo')
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='botinfo'),            
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')  
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
+            InlineKeyboardButton('ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʟɪɴᴋs', url='https://t.me/UrvashiTheaters_Main')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1106,13 +1115,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "botinfo":
         buttons = [[                             
-            InlineKeyboardButton('📈 sᴛᴀᴛᴜs', callback_data='stats'),
-            InlineKeyboardButton('☠ sᴏᴜʀᴄᴇ', callback_data='sorce')
+            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
+            InlineKeyboardButton('sᴏᴜʀᴄᴇ', callback_data='sorce')
             ],[
-            InlineKeyboardButton("🤴🏻 ᴀᴅᴍɪɴ", url=f"https://t.me/MCU_ADMIN_V1_BOT" ),
-            ],[
-            InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
-            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                       
+            InlineKeyboardButton("ᴀᴅᴍɪɴ", url=f"https://t.me/PowerOfTG" ),
+            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')                                  
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.message.edit_text(
@@ -1122,8 +1129,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[            
-            InlineKeyboardButton('🪬 ʜᴏᴍᴇ 🪬', callback_data='start'),
-            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='help')                                    
+            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')                                          
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.message.edit_text(
@@ -1133,7 +1139,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )        
     elif query.data == "sorce":
         buttons = [[
-            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='botinfo')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='botinfo')
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.message.edit_text(
@@ -1154,7 +1160,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         await query.message.edit_text("ᴡᴀɪᴛ.....")
         buttons = [[
-            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='botinfo'),            
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='botinfo'),            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         tot1 = await Media2.count_documents()
@@ -1372,7 +1378,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] ⊳ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1390,26 +1396,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    btn.insert(0, 
-        [
-           InlineKeyboardButton("ᴏᴛᴛ ᴜᴘᴅᴀᴛᴇs", url='https://t.me/+WgmakVHYWL01MmY1'),
-           InlineKeyboardButton("ᴏᴛᴛ ɪɴsᴛɢʀᴀᴍ", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
-        ]
-    )
-    btn.insert(1, 
-        [
-           InlineKeyboardButton("sᴇɴᴅ ᴀʟʟ ғɪʟᴇs", callback_data=f"send_fall#{key}"),
-           InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
-        ]
-    )
-    btn.insert(2, 
-        [
-           InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("sᴇᴀsᴏɴs", callback_data=f"seasons#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{search.replace(' ', '_')}#{key}"),
-           InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇ", callback_data=f"episodes#{search.replace(' ', '_')}#{key}")
-        ]
-    )
+    
     if offset != "":
         try:
             offset = int(offset)
@@ -1420,18 +1407,18 @@ async def auto_filter(client, msg, spoll=False):
         
     if offset== 0:        
         btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")]
+                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
         )
     else:
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📖 𝑷𝒂𝒈𝒆𝒔 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-            InlineKeyboardButton(text="Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"ᴘᴀɢᴇ 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
+            InlineKeyboardButton(text="ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{offset}")]
        )
         btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+nqLSf7SMZA5mOWQ1")]
+                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -1468,7 +1455,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>𝖧𝖾𝗒 : {msg.from_user.mention}\n𝖥𝗂𝗅𝗆 : {search}\n𝖱𝖾𝗌𝗎𝗅𝗍𝗌 : {total_results}\n\n[Usᴇ Bᴇʟᴏᴡ Nᴇxᴛ Bᴜᴛᴛᴏɴ]</b>"         
+        cap = f"<b><i><blockquote>►Film : {search}\n►Rating : {random.choice(RATING)}\n►Genre : {random.choice(GENRES)}\n►Result : {total_results}</i></blockquote></b>\n\n<b><i>©𝐓𝐞𝐚𝐦 𝐔𝐫𝐯𝐚𝐬𝐡𝐢 𝐓𝐡𝐞𝐚𝐭𝐞𝐫𝐬™️</i></b>"         
     if imdb and imdb.get('poster'):
         try:
             mat = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
