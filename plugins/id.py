@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-@Client.on_message(filters.command('id'))
+@Client.on_message(filters.command('idi'))
 async def show_id(client, message):
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
