@@ -46,8 +46,9 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 
 @Client.on_message(filters.text & filters.incoming)
 async def give_filters(client, message):
-        await global_filters(client, message)
-        await manual_filters(client, message)
+    k = await global_filters(client, message)    
+    if k == True:
+        await auto_filter(client, message)
             
 
 @Client.on_callback_query(filters.regex(r"^next"))
