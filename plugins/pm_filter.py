@@ -150,22 +150,24 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer(script.ALRT_TXT, show_alert=True)
+        return await query.answer("Search Your Own", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer(script.OLD_ALRT_TXT, show_alert=True)
+        return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer(script.TOP_ALRT_MSG)
-    k = await manual_filters(bot, query.message, text=movie)
+    await query.answer('Checking for Movie in database...')
+    k = await global_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit(script.MVE_NT_FND)
+            k = await query.message.edit("<b><i>Movie Not available Reason\n\n1)O.T.T Or DVD Not Released\n\n2)Type Name With Year\n\n3)Movie Is Not Available in the database Report to Admins\n\nReport to Admin By 👇\n@admins</i></b>")
+            await asyncio.sleep(5)
+            await k.delete()
             
 # Year 
 @Client.on_callback_query(filters.regex(r"^years#"))
@@ -1334,37 +1336,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
         message = msg
+        matrix = msg.text
         settings = await get_settings(message.chat.id)
-        if message.text.startswith("/"): return  # ignore commands
+        if matrix.startswith("/") or matrix.startswith("#"): return  # ignore commands
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
         if 2 < len(message.text) < 100:
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                reqst_gle = search.replace(" ", "+")
-                btn_duction = InlineKeyboardButton("𝖬𝗎𝗌𝗍 𝖱𝖾𝖺𝖽", callback_data="endio")
-                btn_ductior = InlineKeyboardButton("𝖱𝗎𝗅𝖾𝗌", callback_data="oooi")  
-                btn_dadduco = InlineKeyboardButton("𝖥𝗈𝗋𝗆𝖺𝗍", callback_data="minfo")
-        
-                intro_row = [btn_duction, btn_ductior, btn_dadduco]
-                btn_eng = InlineKeyboardButton("ᴇɴɢ", callback_data="eng")
-                btn_mal = InlineKeyboardButton("ᴍᴀʟ", callback_data="mal")
-                btn_hin = InlineKeyboardButton("ʜɪɴ", callback_data="hin")
-                btn_tam = InlineKeyboardButton("ᴛᴀᴍ", callback_data="tam")
-                btn_tel = InlineKeyboardButton("ᴛᴇʟ", callback_data="tel")
-
-                language_row = [btn_eng, btn_mal, btn_hin, btn_tam, btn_tel]
-                btn_google = InlineKeyboardButton("𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝖦𝗈𝗈𝗀𝗅𝖾)", url=f"https://www.google.com/search?q={reqst_gle}")
-                google_row = [btn_google]
-
-                keyboard = InlineKeyboardMarkup(inline_keyboard=[intro_row, language_row, google_row])
-                try:
-                    k = await msg.reply_text(text=f"<b>❝ 𝖧𝖾𝗒 {msg.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞\n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>", reply_markup=keyboard)                    
-                    #await k.delete()
-                    return       
-                except Exception as e:
-                    return 
+                if settings["spell_check"]:
+                    return await advantage_spell_chok(client, msg)
+                else:
+                    return
         else:
             return
     else:
@@ -1536,7 +1520,7 @@ async def advantage_spell_chok(msg):
         reply_markup=InlineKeyboardMarkup(btn),
         reply_to_message_id=msg.id
     )
-    await asyncio.sleep(90)
+    await asyncio.sleep(10)
     await spell_check_del.delete()
     await msg.delete()
     
