@@ -116,14 +116,14 @@ async def next_page(bot, query):
                                   callback_data="pages")]
         )
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"ᴘᴀɢᴇ {math.ceil((offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     else:
         btn.append(
@@ -134,7 +134,7 @@ async def next_page(bot, query):
             ],
         )
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
 
     try:
@@ -165,7 +165,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b><i>Movie Not available Reason\n\n1)O.T.T Or DVD Not Released\n\n2)Type Name With Year\n\n3)Movie Is Not Available in the database Report to Admins\n\nReport to Admin By 👇\n@admins</i></b>")
+            k = await query.message.edit("<b><i>Movie Not available Reason\n\n1)O.T.T Or DVD Not Released\n\n2)Type Name With Year\n\n3)Movie Is Not Available in the database Report to Admins\n\nReport to Admin By 👇</i></b>")
             await asyncio.sleep(5)
             await k.delete()
             
@@ -260,7 +260,7 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
         )
     else:
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     temp.SEND_ALL_TEMP[key] = files
@@ -555,7 +555,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         )
     else:
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     temp.SEND_ALL_TEMP[key] = files
@@ -651,7 +651,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     else:
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     temp.SEND_ALL_TEMP[key] = files
@@ -1391,7 +1391,7 @@ async def auto_filter(client, msg, spoll=False):
         
     if offset== 0:        
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     else:
         key = f"{message.chat.id}-{message.id}"
@@ -1402,7 +1402,7 @@ async def auto_filter(client, msg, spoll=False):
             InlineKeyboardButton(text="ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{offset}")]
        )
         btn.append(
-                    [InlineKeyboardButton(text="🚸 ʀᴇQᴜᴇꜱᴛ ʜᴇʀᴇ 🚸", url="https://t.me/movies_club_2019")]
+                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
