@@ -46,7 +46,7 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    k = await manual_filters(client, message)
+    k = await global_filters(client, message)
     if k == False:
         await auto_filter(client, message)
            
