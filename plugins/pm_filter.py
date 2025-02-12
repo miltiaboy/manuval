@@ -46,11 +46,14 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 
 @Client.on_message(filters.text & filters.incoming)
 async def give_filters(client, message):
-    k = await global_filters(client, message)    
-    if k == True:
-        await auto_filter(client, message)
-            
-
+        glob = await global_filters(client, message)
+        auto = await auto_filter(client, message)
+        else:
+            await asyncio.sleep(10)
+        if auto:
+            await auto.delete()
+        if glob:
+            await glob.delete()
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
