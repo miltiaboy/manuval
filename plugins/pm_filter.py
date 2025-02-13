@@ -158,19 +158,11 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            buttons = [[          
-                InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
-                InlineKeyboardButton('ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/PowerOfTG')            
-                ],[
-                InlineKeyboardButton('ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʟɪɴᴋs', url='https://t.me/UrvashiTheaters_Main')
-           ]]
-           reply_markup = InlineKeyboardMarkup(buttons)
-       k = await query.message.edit_text(     
-               text=script.SPELL_TXT.format,
-               reply_markup=reply_markup            
-            )
-            await asyncio.sleep(5)
-            await k.delete()
+            button = [[        
+            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
+            ]]
+            k = await query.message.edit_text(text=script.SPELL_TXT),
+                reply_markup=InlineKeyboardMarkup(button)
             
 # Year 
 @Client.on_callback_query(filters.regex(r"^years#"))
