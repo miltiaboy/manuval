@@ -158,11 +158,9 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            button = [[        
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
-            ]]
-            k = await query.message.edit_text(text=script.SPELL_TXT),
-                reply_markup=InlineKeyboardMarkup(button)
+        k = await query.message.edit(script.MOVREQ_TXT)
+        await asyncio.sleep(30)
+        await k.delete()
             
 # Year 
 @Client.on_callback_query(filters.regex(r"^years#"))
