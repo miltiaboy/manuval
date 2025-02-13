@@ -164,7 +164,7 @@ async def send_file(client, query, ident, file_id):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('ɢʀᴏᴜᴘ', url=f'https://t.me/+WgmakVHYWL01MmY1'),  
+                            InlineKeyboardButton('ɢʀᴏᴜᴘ', url=f'https://t.me/+JQeou0PAx_Y0ZGFl'),  
                             InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/UrvashiTheaters_Main')
                            ]
                         ]
