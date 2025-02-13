@@ -156,12 +156,13 @@ async def advantage_spoll_choker(bot, query):
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
             k = (movie, files, offset, total_results)
-            await auto_filter(bot, query, k)
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 Back', url='https://t.me/+JQeou0PAx_Y0ZGFl')
-        ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
+            await auto_filter(bot, query, k)               
         else:
+            buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', url='https://t.me/+JQeou0PAx_Y0ZGFl')
+            ]]
+            reply_markup=InlineKeyboardMarkup(buttons)
+            
             k = await query.message.edit_text(text=script.MOVREQ_TXT, reply_markup=reply_markup)
             await asyncio.sleep(10)
             await k.delete()
