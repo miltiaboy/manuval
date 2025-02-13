@@ -115,16 +115,12 @@ async def next_page(bot, query):
              InlineKeyboardButton(f"ᴘᴀɢᴇ {math.ceil((offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
-        btn.append(
-                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
-        )
+        
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"ᴘᴀɢᴇ {math.ceil((offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
-        btn.append(
-                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
-        )
+        
     else:
         btn.append(
             [
@@ -133,10 +129,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-        btn.append(
-                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
-        )
-
+        
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -165,7 +158,17 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b><i>Movie Not available Reason\n\n1)O.T.T Or DVD Not Released\n\n2)Type Name With Year\n\n3)Movie Is Not Available in the database Report to Admins\n\nReport to Admin By 👇</i></b>")
+            buttons = [[          
+                InlineKeyboardButton('ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+JQeou0PAx_Y0ZGFl'),
+                InlineKeyboardButton('ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/PowerOfTG')            
+                ],[
+                InlineKeyboardButton('ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʟɪɴᴋs', url='https://t.me/UrvashiTheaters_Main')
+           ]]
+           reply_markup = InlineKeyboardMarkup(buttons)
+       k = await query.message.edit_text(     
+               text=script.SPELL_TXT.format,
+               reply_markup=reply_markup            
+            )
             await asyncio.sleep(5)
             await k.delete()
             
