@@ -162,7 +162,7 @@ async def advantage_spoll_choker(bot, query):
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         else:
-            k = await query.message.edit(script.MOVREQ_TXT, reply_markup=reply_markup)
+            k = await query.message.edit_text(text=script.MOVREQ_TXT, reply_markup=reply_markup)
             await asyncio.sleep(10)
             await k.delete()
             
