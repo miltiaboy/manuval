@@ -23,7 +23,11 @@ class script(object):
 
 👇 CLICK "REQUEST TO JOIN CHANNEL"__**"""
 
-    SPELL_TXT = """hai"""
+    NORSLTS = """𝗜𝗗 <b>: {}</b>
+𝗡𝗮𝗺𝗲 <b>: {}</b>
+
+
+𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <code>{}</code>"""
     
     AUTOFILTER_TXT = """Help: <b>Auto Filter
     
@@ -79,7 +83,7 @@ NOTE:
 𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖲𝗒𝗆𝖻𝗈𝗅𝗌 𝖶𝗁𝗂𝗅𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖬𝗈𝗏𝗂𝖾𝗌 𝗅𝗂𝗄𝖾 (+:;'!-|...𝖾𝗍𝖼)
 
 𝖨𝖿 𝖸𝗈𝗎 𝖣𝗈𝗇'𝗍 𝖦𝖾𝗍 𝖬𝗈𝗏𝗂𝖾𝗌 𝖠𝗇𝖽 𝖲𝖾𝗋𝗂𝖾𝗌⌛️
-𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇 - @MCU_ADMIN_V1_BOT
+𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇 -
 
 𝖬𝗈𝗏𝗂𝖾𝗌 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗂𝗇𝗀 𝖥𝗈𝗋𝗆𝖺𝗍
 𝖪𝗎𝗋𝗎𝗉 𝖬𝗈𝗏𝗂𝖾❌
