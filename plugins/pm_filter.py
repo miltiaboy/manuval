@@ -157,14 +157,17 @@ async def advantage_spoll_choker(bot, query):
         if files:
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)               
-        else:
+        else:            
             buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', url='https://t.me/+JQeou0PAx_Y0ZGFl')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             
+            reqstr1 = query.from_user.id if query.from_user else 0
+            reqstr = await bot.get_users(reqstr1)
+            await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
             k = await query.message.edit_text(text=script.MOVREQ_TXT, reply_markup=reply_markup)
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await k.delete()
             
 # Year 
@@ -1380,28 +1383,13 @@ async def auto_filter(client, msg, spoll=False):
         ]
     
     if offset != "":
-        try:
-            offset = int(offset)
-        except ValueError:
-            offset = 0
-    else:
-        offset = 0    
-        
-    if offset== 0:        
-        btn.append(
-                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
-        )
-    else:
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"ᴘᴀɢᴇ 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
             InlineKeyboardButton(text="ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{offset}")]
-       )
-        btn.append(
-                    [InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/movies_club_2019")]
-        )
+       )        
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -1442,25 +1430,25 @@ async def auto_filter(client, msg, spoll=False):
         try:
             mat = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(300)
             await mat.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             mat = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             
-            await asyncio.sleep(60)
+            await asyncio.sleep(300)
             await mat.delete()
         except Exception as e:
             logger.exception(e)
             mat = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             
-            await asyncio.sleep(60)
+            await asyncio.sleep(300)
             await mat.delete()
     else:
         mat = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         
-        await asyncio.sleep(60)
+        await asyncio.sleep(300)
         await mat.delete()
    # if spoll:
       #  await msg.message.delete()
@@ -1483,13 +1471,13 @@ async def advantage_spell_chok(client, msg):
         button = [[
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")            
         ]]
-       # await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
+        await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await msg.reply_text(
             text=("<b>▪sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
             reply_markup=InlineKeyboardMarkup(button),
             reply_to_message_id=msg.id
         )
-        await asyncio.sleep(60)
+        await asyncio.sleep(30)
         await msg.delete()
         await k.delete()      
         return
@@ -1499,13 +1487,13 @@ async def advantage_spell_chok(client, msg):
         button = [[
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")   
         ]]
-       # await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
+        await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await msg.reply_text(
             text=(f"<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
             reply_markup=InlineKeyboardMarkup(button),
             reply_to_message_id=msg.id
         )
-        await asyncio.sleep(60)
+        await asyncio.sleep(30)
         await msg.delete()
         await k.delete()
         return
@@ -1520,12 +1508,12 @@ async def advantage_spell_chok(client, msg):
         ]
         for k, movie_name in enumerate(movielist)
     ]
-    btn.append([InlineKeyboardButton(text="✘ ᴄʟᴏsᴇ ✘", callback_data=f'spol#{reqstr1}#close_spellcheck')])
+    btn.append([InlineKeyboardButton(text="🚸 ഉർവശി തീയറ്റേഴ്‌സ് 🚸", url="https://t.me/+JQeou0PAx_Y0ZGFl")])
     ruby = await msg.reply(f"<b>◍ Nᴏ Mᴏᴠɪᴇ Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {mv_rqst}\n\n☞ Cʜᴏᴏꜱᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ʙᴇʟᴏᴡ 👇</b>",
                     reply_markup=InlineKeyboardMarkup(btn),
                     reply_to_message_id=msg.id
     )
-    await asyncio.sleep(10)
+    await asyncio.sleep(30)
     await ruby.delete()
     
 async def global_filters(client, message, text=False):
