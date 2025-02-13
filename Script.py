@@ -22,6 +22,8 @@ class script(object):
 🗣 In Order To Get The Movie Requested By You in Our Group, You Must Have To Request to join Our Official Channel First By Clicking " 📢 Request to Join Channel 📢 " Button.After That, I'll Send You That Movie 🙈
 
 👇 CLICK "REQUEST TO JOIN CHANNEL"__**"""
+
+    SPELL_TXT = """hai"""
     
     AUTOFILTER_TXT = """Help: <b>Auto Filter
     
