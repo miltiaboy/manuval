@@ -53,7 +53,7 @@ REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-NORES_CHANNEL = int(environ.get('NORES_CHANNEL', '-1002330019766'))
+NORES_CHANNEL = int(environ.get('NORES_CHANNEL', '-1002407954898'))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002306644446'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'PowerOfTG')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
