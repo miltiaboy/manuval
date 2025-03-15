@@ -38,11 +38,11 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_NAME = environ.get('DATABASE_NAME', "Enganasetakum")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Ramanan_lover')
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://austin123:frGcR2lFvQkE6IYC@cluster0.liesw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://movietharavadu:UVoobug4UoiWr90I@cluster0.a2va7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://austin2001:rBIgGdrNSOSBDcKF@cluster0.wn6bi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://AUSTINDB:AUSTINDB@cluster0.7uari85.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://movietharavadu:UVoobug4UoiWr90I@cluster0.a2va7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI2 = environ.get("DATABASE_URI2", DATABASE_URI)
+DATABASE_URI3 = environ.get("DATABASE_URI3", DATABASE_URI)
+DATABASE_URI4 = environ.get("DATABASE_URI4", DATABASE_URI)
+DATABASE_URI5 = environ.get("DATABASE_URI5", DATABASE_URI)
                                   
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
